@@ -138,8 +138,7 @@
 	<br>
 	<article style="color:lightgray;">
 		
-	<p> 	Week two was figuring out the Alexa application development. The code for this repository is linked <a href = "https://github.com/CaelanMacArthur/alexa-app"> here.</a></p>
-		
+	<p> 	Week two was figuring out the Alexa application development. The code for this repository is linked <a href = "https://github.com/CaelanMacArthur/alexa-app">here</a> Dr. Shariq and I have been every day during the work week. In these meeting, we discuss the next steps for the research project, how to present during meetings, and learning new programming concepts. </a></p> 
 	<br> 
 	<h3 style="color:lightgray; text-align: center;">Alexa Skills Development</h3>
 	<br> 
@@ -192,10 +191,7 @@
 	<p>
 		There are many different skill types and each has a different API they call for that functionality.
 	</p>
-	<br>
-	<h4>Smart Home Skill</h4>
-	<br>
-			<p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
+	<p>1)</p> <p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
 		12.0pt;margin-left:0in'><span style='font-size:7.0pt;line-height:107%'><span
 		style='mso-spacerun:yes'></span></span><a
 		href="https://developer.amazon.com/en-US/docs/alexa/smarthome/understand-the-smart-home-skill-api.html"><span
@@ -227,10 +223,7 @@
 		Skills</span></a>. Examples of objects that it controls and interacts with are
 		cameras, lights, locks, thermostats, cameras, and security systems.</p>
 	<br>
-	<p>
-		Amazon Cognito lets users control access to the web and mobile applications. Amazon Cognito uses SAML 2.0 and OpenID Connect.
-	</p>
-	<br>
+	
 		
 	<p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
 	12.0pt;margin-left:0in'>2)<span style='font-size:7.0pt;line-height:107%'><span
@@ -360,9 +353,60 @@
 	<p class=MsoNormal style='margin-top:12.0pt;margin-right:0in;margin-bottom:
 	12.0pt;margin-left:.75in'><span style='mso-spacerun:yes'></span></p>
 
+	
+	
+	<p>5) <a href="https://developer.amazon.com/en-US/docs/alexa/smarthome/build-smart-home-skills-for-entertainment-devices.html">Entertainment Device Skills</a> controls smart home entertainment and audiovisuals (AV) devices such as smart TVs, cable boxes, and other entertainment devices. The APIs it uses is Alexa.ChannelController, Alexa.EqualizerController, Alexa.InputController, Alexa.KeypadController, Alexa.Speaker, Alexa.StepSpeaker, and Alexa.WakeOnLANController.</p>
+	<br> 
+	<p>6) <a href="https://developer.amazon.com/en-US/docs/alexa/game-skills/game-skills-overview.html">Game Skills</a> adds on visuals or you can create a new game with an integrated voice and on-screen experience. The Game Skills support web applications with Alexa Skill integration through the Game Skills API.</p>
+	<br>
+	<p>7) <a href="https://developer.amazon.com/en-US/docs/alexa/game-skills/game-skills-overview.html">Knowledge Skill</a>
+		allows users to ask data queries from classical spreadsheets. It integrates with Alexa for Business, Alexa for Hospitality, or Alexa for Residential skills. It also works along with those application's API.
+	</p>
+	<br>
+	<p>8) <a href="https://developer.amazon.com/en-US/docs/alexa/game-skills/game-skills-overview.html">Alexa Skill Lists</a>simply create lists or to-do lists for the end-user. It generally recorded a connect app of the user.
+	</p>
+	<br>
+	<p> 9)<a href="https://developer.amazon.com/en-US/docs/alexa/music-skills/understand-the-music-skill-api.html">Music, Radi o, and Podcast Skills</a> allow users to control and interface audio streaming (Spotify, Pandora, etc). The Alexa Music, Radio, and Podcast Skill API are used to control and request streaming audio for music.
+	</p>
+	<br>
+	<p> 10) <a href="https://developer.amazon.com/en-US/docs/alexa/networking/overview.html">Networking and Wi-Fi Skills</a> allow Alexa to connect with other devices in an end-users home. This is done through Alexa.Networking.HomeNetworkController, Alexa.Networking.ConnectedDevice, and Alexa.Networking.AccessController APIs that connect all other devices.
+	</p>
+	<br>
+	<p>11)  <a href="https://developer.amazon.com/en-US/docs/alexa/video/understand-the-video-skill-api.html">Video Skills</a> Video Skills allow video streaming to devices that have Alexa integration. For example, Amazon Fire TV. Video Skill API hands the requests when fetching video.
+	</p>
+	<br> 
+	<p>12) <a href="https://developer.amazon.com/en-US/docs/alexa/video/understand-the-video-skill-api.html">Custom skills</a> are third-party Alexa skills developed that allow flexibility outside Amazon regular skills. The idea is to a variety is to provide the end-user of Alexa's as much diversity functionality as possible 
+	</p>
+	<h3 style="color:lightgray; text-align: center;">Testing Third Party Skills with Honeytokens</h3>
+	<br> 
+	<p> In the planning phase of figuring out how to test with honeytokens, we need to figure out the variables when choosing data for testing. Data needs be able to easily tracked and data is something that should easily produced at a low cost. Since Amazon Alexa Ecosystem is so large there are so many data type values available. 
+	</p>
+	<br> 
+	<h3 style="color:lightgray; text-align: center;">Constraints During Testing</h3>
+	<br>
+	<p> Since <a href="https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/tree/2.0.x/ask-sdk-core">Alexa ask-alexa-core</a> seemingly only takes strings for user requests and image types to display on the Echo Show screen. Any alternative formats of sending packets to Alexa not encoded to a string would potentially cause a runtime error if Alexa does not have error handling for data types besides strings. However, <a href="https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/tree/2.0.x/ask-sdk-runtime">Alexa skills ask-sdk-runtime</a> puts input into an array to store in memory, error handling for an unexpected input but seemingly does not for the size of the incoming string. As such it is nesscary to covert data formats that are not string into strings.
+	</p>
+	<br> 
+	
+	<h4>Data Conversion for Amazon Alexa</h4>
+	<br>
+	<p>Since data types in from the intents in the Alexa SDK are only being sent as strings any file that is being handled by Alexa that is not a string type while need to be converted. This would be done switch files removing the file header, stripping the data of the file type, and leaving it in UTF-8. Then put it into a string variable to sent.</p>
+	<br>
+	<p> Logically any Alexa skill that is hosted by AWS would use <a href="https://aws.amazon.com/kinesis/data-streams/">Amazon Kinesis Data Streams</a> streaming cloud solution. This means that Amazon seemingly would have more access to their backend to code to see how to use data is being handled.
+	</p>
+	<br>
+	<br>
+	<p>There is a lot of third-party open-source streaming solutions. A third-party skill could simply take this solution 	implement it and store there the files in a database. Leaving for the data to be misused.</p>
+	<br>
+	<h3 style="color:lightgray; text-align: center;">Next Steps</h3>
+	<br>
+	<p> The next steps are  to build off the <a href = " https://github.com/jideedu/SkillVet">code and dataset</a> from Jide S Edu study's <a href  = "SkillVet: Automated Traceability Analysis of Amazon Alexa Skills"> SkillVet: Automated Traceability Analysis of Amazon Alexa Skills</a> to 
+	figure out what skills we want to test. Also, to figure out what type of data we want to use for the honeytokens and then start testing. </p>
 	</article>
 </section>	
-	
+
+
+
 	
 	
 <!--Second Section--> 
